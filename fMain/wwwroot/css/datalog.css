@@ -1,0 +1,270 @@
+/* Datalog Viewer — Phase 5 */
+
+.dl-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+.dl-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  height: 52px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.dl-brand {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+}
+.dl-page-title {
+  font-weight: 600;
+  color: var(--text-dim);
+  margin-right: 8px;
+}
+.dl-tabs {
+  display: flex;
+  gap: 4px;
+}
+.dl-tab {
+  padding: 4px 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-dim);
+  transition: background 0.15s;
+}
+.dl-tab:hover { background: var(--border); }
+.dl-tab.active {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+.dl-live {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.live-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.live-dot.on  { background: var(--green); box-shadow: 0 0 4px var(--green); }
+.live-dot.off { background: var(--text-mute); }
+
+/* ── Filter bar ───────────────────────────────────────────────────────────── */
+.dl-filter-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 10px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.dl-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.fl { font-size: 11px; color: var(--text-dim); }
+.fi {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 5px 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+  font-family: inherit;
+}
+.fi:focus { border-color: var(--blue); }
+
+/* ── Main panels ─────────────────────────────────────────────────────────── */
+.dl-main {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.dl-panel {
+  flex: 1;
+  overflow: auto;
+  padding: 16px 20px;
+}
+
+/* ── Summary bar ──────────────────────────────────────────────────────────── */
+.dl-summary {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.dl-summary strong { color: var(--text); }
+
+/* ── Tables ───────────────────────────────────────────────────────────────── */
+.dl-table-wrap { overflow-x: auto; }
+.dl-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.dl-table th {
+  text-align: left;
+  padding: 7px 10px;
+  background: var(--panel);
+  border-bottom: 2px solid var(--border);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.dl-table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.dl-table .log-row:hover td { background: var(--panel); cursor: default; }
+
+.res-pass { color: var(--green); font-weight: 600; }
+.res-fail { color: var(--red);   font-weight: 600; }
+.cpk-good { color: var(--green); font-weight: 700; }
+.cpk-ok   { color: var(--amber); font-weight: 700; }
+.cpk-bad  { color: var(--red);   font-weight: 700; }
+
+.dl-empty {
+  text-align: center;
+  color: var(--text-mute);
+  padding: 40px;
+}
+.dl-loading { padding: 12px; color: var(--text-dim); font-style: italic; }
+.dl-hint { font-size: 12px; color: var(--text-dim); }
+
+/* ── Expand button ────────────────────────────────────────────────────────── */
+.expand-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  width: 22px; height: 22px;
+  cursor: pointer;
+  font-size: 10px;
+  color: var(--text-dim);
+  display: flex; align-items: center; justify-content: center;
+  padding: 0;
+}
+.expand-btn:hover { background: var(--border); }
+.steps-row td { padding: 0 0 8px 32px; }
+
+/* ── Sub-table (step detail) ──────────────────────────────────────────────── */
+.dl-sub-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-top: 4px;
+}
+.dl-sub-table th {
+  background: var(--bg);
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 11px;
+  text-align: left;
+}
+.dl-sub-table td {
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Stats ────────────────────────────────────────────────────────────────── */
+.histo-wrap {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  max-width: 700px;
+}
+.histo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.btn-sm-link {
+  background: none;
+  border: none;
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 4px;
+  text-decoration: underline;
+}
+
+/* ── Trend ────────────────────────────────────────────────────────────────── */
+.trend-wrap {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+/* ── Steps modal ──────────────────────────────────────────────────────────── */
+.steps-box {
+  width: 90vw;
+  max-width: 1000px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+.steps-table-wrap {
+  flex: 1;
+  overflow: auto;
+}
+
+/* ── Toast ────────────────────────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 10px 16px;
+  font-size: 13px;
+  box-shadow: var(--shadow);
+  z-index: 9999;
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; } }

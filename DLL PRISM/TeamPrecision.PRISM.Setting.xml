@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cSettingSerial xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestingMode>Debug</TestingMode>
+  <DatabaseServer>Vd147+pBWChvWVcRsdZvHQ==</DatabaseServer>
+  <DatabaseName>awiuCMQfI7kyjwyD3O/AmA==</DatabaseName>
+  <DatabaseUser>qNMPB0293rI=</DatabaseUser>
+  <DatabasePassword>m/2+3pRMmYg=</DatabasePassword>
+  <ComputerName>BOS-PC-FCT1</ComputerName>
+  <StationName>PROGRAM_1</StationName>
+  <ProcessName>FCT2</ProcessName>
+  <UsePasswordWhenLogin>false</UsePasswordWhenLogin>
+</cSettingSerial>

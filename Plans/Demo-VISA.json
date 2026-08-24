@@ -1,0 +1,93 @@
+{
+  "name": "Demo — VISA DMM",
+  "version": "1.0",
+  "filePath": "",
+  "sameStepMode": false,
+  "defaultTimeoutMs": 10000,
+  "steps": [
+    {
+      "id": "h1", "rowType": "Header", "stepNum": 0,
+      "description": "=== INSTRUMENT CONNECT ===",
+      "function": "", "param1": "", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 0,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s1", "rowType": "Normal", "stepNum": 1,
+      "description": "Connect to DMM (USB0::0x2A8D::0x1301::INSTR)",
+      "function": "VisaConnect", "param1": "USB0::0x2A8D::0x1301::INSTR", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 10000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s2", "rowType": "Normal", "stepNum": 2,
+      "description": "Reset DMM (*RST)",
+      "function": "VisaWrite", "param1": "USB0::0x2A8D::0x1301::INSTR", "param2": "*RST", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 5000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "h2", "rowType": "Header", "stepNum": 0,
+      "description": "=== DC VOLTAGE MEASUREMENTS ===",
+      "function": "", "param1": "", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 0,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s3", "rowType": "Normal", "stepNum": 3,
+      "description": "Set DCV Mode",
+      "function": "VisaWrite", "param1": "USB0::0x2A8D::0x1301::INSTR", "param2": "CONF:VOLT:DC", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 5000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s4", "rowType": "Normal", "stepNum": 4,
+      "description": "Measure VCC 5V Rail",
+      "function": "VisaQuery", "param1": "USB0::0x2A8D::0x1301::INSTR", "param2": "READ?", "param3": "5.001", "param4": "",
+      "minValue": 4.75, "maxValue": 5.25, "unit": "V", "failBehavior": "Stop", "timeoutMs": 10000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s5", "rowType": "Normal", "stepNum": 5,
+      "description": "Measure 3.3V Rail",
+      "function": "VisaQuery", "param1": "USB0::0x2A8D::0x1301::INSTR", "param2": "READ?", "param3": "3.302", "param4": "",
+      "minValue": 3.15, "maxValue": 3.45, "unit": "V", "failBehavior": "Stop", "timeoutMs": 10000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "h3", "rowType": "Header", "stepNum": 0,
+      "description": "=== RESISTANCE ===",
+      "function": "", "param1": "", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 0,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s6", "rowType": "Normal", "stepNum": 6,
+      "description": "Set 2-Wire Resistance Mode",
+      "function": "VisaWrite", "param1": "USB0::0x2A8D::0x1301::INSTR", "param2": "CONF:RES", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 5000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s7", "rowType": "Normal", "stepNum": 7,
+      "description": "Measure PCB Resistance",
+      "function": "VisaQuery", "param1": "USB0::0x2A8D::0x1301::INSTR", "param2": "READ?", "param3": "2.5", "param4": "",
+      "minValue": 0.0, "maxValue": 10.0, "unit": "Ω", "failBehavior": "Stop", "timeoutMs": 10000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "h4", "rowType": "Header", "stepNum": 0,
+      "description": "=== CLEANUP ===",
+      "function": "", "param1": "", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 0,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s8", "rowType": "Normal", "stepNum": 8,
+      "description": "Disconnect DMM",
+      "function": "VisaDisconnect", "param1": "USB0::0x2A8D::0x1301::INSTR", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 5000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    }
+  ]
+}

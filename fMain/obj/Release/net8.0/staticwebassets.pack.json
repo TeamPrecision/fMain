@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\css\\datalog.css",
+      "PackagePath": "staticwebassets\\css\\datalog.css"
+    },
+    {
+      "Id": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\css\\diagram.css",
+      "PackagePath": "staticwebassets\\css\\diagram.css"
+    },
+    {
+      "Id": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\datalog.html",
+      "PackagePath": "staticwebassets\\datalog.html"
+    },
+    {
+      "Id": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\diagram.html",
+      "PackagePath": "staticwebassets\\diagram.html"
+    },
+    {
+      "Id": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\js\\datalog.js",
+      "PackagePath": "staticwebassets\\js\\datalog.js"
+    },
+    {
+      "Id": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\js\\diagram.js",
+      "PackagePath": "staticwebassets\\js\\diagram.js"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.fMain.props",
+      "PackagePath": "build\\fMain.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.fMain.props",
+      "PackagePath": "buildMultiTargeting\\fMain.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.fMain.props",
+      "PackagePath": "buildTransitive\\fMain.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.fMain.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

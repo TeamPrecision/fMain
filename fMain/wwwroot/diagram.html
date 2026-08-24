@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fMain — Diagram Editor</title>
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/diagram.css">
+</head>
+<body class="dg-body">
+
+<header class="dg-header">
+  <a href="/" class="dl-brand"><span class="h-mark">f</span><span class="h-title">fMain</span></a>
+  <span class="dl-page-title">Test Plan — Block Diagram Editor</span>
+  <div class="dg-header-actions">
+    <button class="btn btn-secondary btn-sm" onclick="loadCurrentPlan()">⟳ Load Current Plan</button>
+    <button class="btn btn-primary   btn-sm" onclick="savePlanBack()"   >💾 Save to Server</button>
+    <button class="btn btn-secondary btn-sm" onclick="zoomFit()">Fit</button>
+    <span id="dg-status" class="dg-status"></span>
+  </div>
+</header>
+
+<div class="dg-workspace">
+
+  <!-- Side panel -->
+  <aside class="dg-panel" id="sidePanel">
+    <div class="dg-panel-title">Step Properties</div>
+    <div id="panelEmpty" class="dg-panel-empty">Click a step to edit.</div>
+    <div id="panelForm" class="hidden">
+      <div class="fp-group">
+        <label class="fp-lbl">Description</label>
+        <input id="fp-desc" class="fp-input" type="text">
+      </div>
+      <div class="fp-group">
+        <label class="fp-lbl">Function</label>
+        <input id="fp-fn" class="fp-input" type="text">
+      </div>
+      <div class="fp-group fp-row">
+        <div>
+          <label class="fp-lbl">Min</label>
+          <input id="fp-min" class="fp-input" type="text">
+        </div>
+        <div>
+          <label class="fp-lbl">Max</label>
+          <input id="fp-max" class="fp-input" type="text">
+        </div>
+        <div>
+          <label class="fp-lbl">Unit</label>
+          <input id="fp-unit" class="fp-input" type="text">
+        </div>
+      </div>
+      <div class="fp-group">
+        <label class="fp-lbl">On PASS → go to</label>
+        <select id="fp-pass" class="fp-input" onchange="applyGoto()"></select>
+      </div>
+      <div class="fp-group">
+        <label class="fp-lbl">On FAIL → go to</label>
+        <select id="fp-fail" class="fp-input" onchange="applyGoto()"></select>
+      </div>
+      <div class="fp-group">
+        <label class="fp-lbl">Timeout (ms)</label>
+        <input id="fp-timeout" class="fp-input" type="number" min="0">
+      </div>
+      <div class="fp-group">
+        <label class="fp-lbl">Type</label>
+        <select id="fp-type" class="fp-input">
+          <option value="Normal">Normal</option>
+          <option value="Header">Header / Section</option>
+          <option value="Skip">Skip</option>
+          <option value="Serial">Serial</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:6px;margin-top:12px">
+        <button class="btn btn-primary btn-sm" onclick="applyPanel()">Apply</button>
+        <button class="btn btn-danger  btn-sm" onclick="deleteSelected()">Delete Step</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Canvas area -->
+  <div class="dg-canvas-wrap" id="canvasWrap">
+    <svg id="dg-svg" class="dg-svg" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/>
+        </marker>
+        <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+        </marker>
+        <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+        </marker>
+      </defs>
+      <g id="dg-root" transform="translate(0,0) scale(1)"></g>
+    </svg>
+    <div class="dg-empty-hint" id="dgHint">Load a test plan to begin.</div>
+    <div class="dg-zoom-btns">
+      <button onclick="zoom(0.15)">+</button>
+      <button onclick="zoom(-0.15)">−</button>
+    </div>
+    <button class="dg-add-btn" onclick="addStep()">+ Add Step</button>
+  </div>
+</div>
+
+<script src="/js/diagram.js"></script>
+</body>
+</html>

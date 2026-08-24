@@ -1,0 +1,79 @@
+{
+  "name": "Demo — Relay Card",
+  "version": "1.0",
+  "filePath": "",
+  "sameStepMode": false,
+  "defaultTimeoutMs": 8000,
+  "steps": [
+    {
+      "id": "h1", "rowType": "Header", "stepNum": 0,
+      "description": "=== RELAY SETUP ===",
+      "function": "", "param1": "", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 0,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s1", "rowType": "Normal", "stepNum": 1,
+      "description": "Open All Relays",
+      "function": "RelayOpenAll", "param1": "", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 5000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s2", "rowType": "Normal", "stepNum": 2,
+      "description": "Close Relay 1 (Power Rail)",
+      "function": "RelayClose", "param1": "1", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 5000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s3", "rowType": "Normal", "stepNum": 3,
+      "description": "Wait for Power Stable",
+      "function": "delay_ms", "param1": "300", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 5000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "h2", "rowType": "Header", "stepNum": 0,
+      "description": "=== MEASUREMENTS ===",
+      "function": "", "param1": "", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 0,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s4", "rowType": "Normal", "stepNum": 4,
+      "description": "Measure VCC (via Relay 1)",
+      "function": "MockMeasure", "param1": "5.0", "param2": "", "param3": "", "param4": "",
+      "minValue": 4.8, "maxValue": 5.2, "unit": "V", "failBehavior": "Stop", "timeoutMs": 8000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s5", "rowType": "Normal", "stepNum": 5,
+      "description": "Close Relay 2 (Signal Path)",
+      "function": "RelayClose", "param1": "2", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 5000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s6", "rowType": "Normal", "stepNum": 6,
+      "description": "Measure Signal Continuity",
+      "function": "MockMeasure", "param1": "0.8", "param2": "", "param3": "", "param4": "",
+      "minValue": 0.0, "maxValue": 1.5, "unit": "Ω", "failBehavior": "Stop", "timeoutMs": 8000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "h3", "rowType": "Header", "stepNum": 0,
+      "description": "=== CLEANUP ===",
+      "function": "", "param1": "", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 0,
+      "onPassGoto": "next", "onFailGoto": "end"
+    },
+    {
+      "id": "s7", "rowType": "Normal", "stepNum": 7,
+      "description": "Open All Relays",
+      "function": "RelayOpenAll", "param1": "", "param2": "", "param3": "", "param4": "",
+      "minValue": null, "maxValue": null, "unit": "", "failBehavior": "Stop", "timeoutMs": 5000,
+      "onPassGoto": "next", "onFailGoto": "end"
+    }
+  ]
+}

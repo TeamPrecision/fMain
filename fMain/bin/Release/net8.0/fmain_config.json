@@ -1,0 +1,47 @@
+{
+  "Port": 5000,
+  "SpecialIPs": [
+    "192.168.10.112",
+    "192.168.10.112"
+  ],
+  "AdminIPs": [
+    "127.0.0.1",
+    "::1"
+  ],
+  "ModulesBasePath": "D:/svn",
+  "Tester": {
+    "NumHeads": 3,
+    "FailBehavior": "Stop",
+    "AllowRetest": false,
+    "AutoStart": false,
+    "UseRelayCard": false,
+    "RelayCardComport": "",
+    "NumCardRelay": 1,
+    "AutoClearSnAfterTest": false,
+    "SnValidationRegex": "",
+    "FgPlansFolder": ""
+  },
+  "MySql": {
+    "ConnectionString": "Server=localhost;Port=3306;Database=fmain_db;User=root;Password=;"
+  },
+  "Script": {
+    "PyVersion": "Python313",
+    "PyFolder": ""
+  },
+  "UI": {
+    "BarcodeMode": "Scanner"
+  },
+  "Hardware": {
+    "DevManViewPath": "",
+    "VisaDefaultResource": "",
+    "VisaTimeoutMs": 5000
+  },
+  "Prism": {
+    "DllPath": "D:\\Server Svn\\Claude\\fMain\\DLL PRISM\\TeamPrecision.PRISM.dll",
+    "Mode": "Debug",
+    "ProcessName": "FCT",
+    "ComputerName": "",
+    "StationName": "",
+    "SnDigits": 0
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fMain — Datalog Viewer</title>
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/datalog.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@8.0.0/dist/browser/signalr.min.js"></script>
+</head>
+<body class="dl-body">
+
+<header class="dl-header">
+  <a href="/" class="dl-brand"><span class="h-mark">f</span><span class="h-title">fMain</span></a>
+  <span class="dl-page-title">Datalog Viewer</span>
+  <nav class="dl-tabs">
+    <button class="dl-tab active" onclick="showTab('logs')">Test Logs</button>
+    <button class="dl-tab" onclick="showTab('stats')">CPK / Stats</button>
+    <button class="dl-tab" onclick="showTab('trend')">Trend Chart</button>
+  </nav>
+  <div class="dl-live">
+    <span id="liveDot" class="live-dot off"></span>
+    <span id="liveLabel">Connecting…</span>
+  </div>
+</header>
+
+<!-- ═══════════════════════════ FILTER BAR ═══════════════════════════════════ -->
+<div class="dl-filter-bar">
+  <div class="dl-filter-group">
+    <label class="fl">Serial Number</label>
+    <input id="fSN" class="fi" type="text" placeholder="Exact SN…">
+  </div>
+  <div class="dl-filter-group">
+    <label class="fl">Work Order</label>
+    <input id="fWO" class="fi" type="text" placeholder="WO number…">
+  </div>
+  <div class="dl-filter-group">
+    <label class="fl">From</label>
+    <input id="fFrom" class="fi" type="datetime-local">
+  </div>
+  <div class="dl-filter-group">
+    <label class="fl">To</label>
+    <input id="fTo" class="fi" type="datetime-local">
+  </div>
+  <div class="dl-filter-group">
+    <label class="fl">Result</label>
+    <select id="fResult" class="fi">
+      <option value="">All</option>
+      <option value="PASS">PASS</option>
+      <option value="FAIL">FAIL</option>
+    </select>
+  </div>
+  <div class="dl-filter-group">
+    <label class="fl">Limit</label>
+    <input id="fLimit" class="fi" type="number" value="100" min="1" max="500" style="width:70px">
+  </div>
+  <button class="btn btn-primary" onclick="search()">Search</button>
+  <button class="btn btn-secondary" onclick="exportData('csv')">CSV</button>
+  <button class="btn btn-secondary" onclick="exportData('xlsx')">Excel</button>
+  <button class="btn btn-secondary" onclick="exportData('pdf')">PDF</button>
+</div>
+
+<!-- ═══════════════════════════ PANELS ═══════════════════════════════════════ -->
+<main class="dl-main">
+
+  <!-- ── LOGS TAB ──────────────────────────────────────────────────────────── -->
+  <div id="tab-logs" class="dl-panel active">
+    <div id="logSummary" class="dl-summary hidden"></div>
+    <div class="dl-table-wrap">
+      <table class="dl-table" id="logTable">
+        <thead>
+          <tr>
+            <th style="width:24px"></th>
+            <th>ID</th>
+            <th>Work Order</th>
+            <th>Serial Number</th>
+            <th>Head</th>
+            <th>Start Time</th>
+            <th>Duration</th>
+            <th>Result</th>
+            <th>Plan</th>
+          </tr>
+        </thead>
+        <tbody id="logBody">
+          <tr><td colspan="9" class="dl-empty">Use the filters above and press Search.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── STATS TAB ─────────────────────────────────────────────────────────── -->
+  <div id="tab-stats" class="dl-panel hidden">
+    <div style="display:flex;align-items:center;gap:8px;padding:0 0 12px">
+      <button class="btn btn-primary" onclick="loadStats()">Compute Stats</button>
+      <span class="dl-hint">Uses the Work Order and date filters from the filter bar.</span>
+    </div>
+    <div class="dl-table-wrap">
+      <table class="dl-table" id="statsTable">
+        <thead>
+          <tr>
+            <th>Step / Description</th>
+            <th>Function</th>
+            <th>Total</th>
+            <th>Pass</th>
+            <th>Fail</th>
+            <th>Yield %</th>
+            <th>Avg</th>
+            <th>Std Dev</th>
+            <th>Min</th>
+            <th>Max</th>
+            <th>LSL</th>
+            <th>USL</th>
+            <th>Cp</th>
+            <th>Cpk</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="statsBody">
+          <tr><td colspan="15" class="dl-empty">Press "Compute Stats" to run.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="histoWrap" class="histo-wrap hidden">
+      <div class="histo-header">
+        <strong id="histoTitle"></strong>
+        <button class="btn-icon" onclick="closeHisto()">✕</button>
+      </div>
+      <canvas id="histoChart" height="220"></canvas>
+    </div>
+  </div>
+
+  <!-- ── TREND TAB ─────────────────────────────────────────────────────────── -->
+  <div id="tab-trend" class="dl-panel hidden">
+    <div style="display:flex;align-items:center;gap:8px;padding:0 0 12px;flex-wrap:wrap">
+      <label class="fl">Step description</label>
+      <input id="trendStep" class="fi" type="text" placeholder="Exact step description…" style="min-width:280px">
+      <button class="btn btn-primary" onclick="loadTrend()">Load Trend</button>
+      <span class="dl-hint">Uses WO and date filters from the filter bar.</span>
+    </div>
+    <div id="trendEmpty" class="dl-empty" style="margin-top:40px">Enter a step description and press Load Trend.</div>
+    <div id="trendWrap" class="trend-wrap hidden">
+      <canvas id="trendChart"></canvas>
+    </div>
+  </div>
+
+</main>
+
+<!-- ═══════════════════════════ STEP DETAIL MODAL ════════════════════════════ -->
+<div id="stepsModal" class="modal-backdrop hidden">
+  <div class="modal-box steps-box">
+    <div class="modal-header">
+      <span id="stepsTitle" class="modal-title"></span>
+      <button class="btn-icon" onclick="closeSteps()">✕</button>
+    </div>
+    <div class="steps-table-wrap">
+      <table class="dl-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Description</th>
+            <th>Function</th>
+            <th>Measure</th>
+            <th>Result</th>
+            <th>LSL</th>
+            <th>USL</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody id="stepsBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="/js/datalog.js"></script>
+</body>
+</html>
