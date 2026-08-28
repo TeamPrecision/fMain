@@ -161,4 +161,5 @@ public class ScriptConfig
 public class UIConfig
 {
     public string BarcodeMode { get; set; } = "Scanner";
+    public int HeadMinWidth { get; set; } = 260;
 }

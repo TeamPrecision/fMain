@@ -13,7 +13,7 @@ start "fMain Server" cmd /k "dotnet run --project fMain.csproj --configuration R
 echo Waiting for server to be ready on http://localhost:49600 ...
 :WAIT
 timeout /t 2 /nobreak >nul
-powershell -Command "try { Invoke-WebRequest -Uri 'http://localhost:49600' -TimeoutSec 2 -UseBasicParsing -ErrorAction Stop | Out-Null; exit 0 } catch { exit 1 }" >nul 2>&1
+curl -s -f -o nul http://localhost:49600 2>nul
 if errorlevel 1 goto WAIT
 
 echo Server is ready — opening browser...

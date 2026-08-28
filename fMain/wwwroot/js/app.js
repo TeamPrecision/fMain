@@ -54,6 +54,16 @@ async function connectToServer() {
       const res = await fetch(`/api/validate-employee?id=${encodeURIComponent(raw)}`);
       const data = await res.json();
       if (!data.valid) { showLoginError('PRISM: ' + data.message); return; }
+      // UserLogin check via cUsers.UserLogin(emp_no)
+      try {
+        const ulRes = await fetch(`/api/user-login?id=${encodeURIComponent(raw)}`);
+        const ulData = await ulRes.json();
+        if (!ulData.ok || String(ulData.result) !== 'true') {
+          showLoginError('PRISM: User not found in system'); return;
+        }
+      } catch (e) {
+        showLoginError('PRISM: UserLogin error — ' + e.message); return;
+      }
     }
   } else if (!raw) {
     showLoginError('Please enter a name.'); return;
@@ -313,9 +323,6 @@ async function denyControl() {
 function buildHeadsGrid(count) {
   const grid = document.getElementById('headsGrid');
   grid.innerHTML = '';
-  grid.classList.toggle('single-head', count === 1);
-  grid.classList.toggle('dual-head',   count === 2);
-  grid.classList.toggle('triple-head', count === 3);
   for (let i = 1; i <= count; i++) grid.appendChild(createHeadCard(i));
 }
 
@@ -903,6 +910,7 @@ async function loadSettings() {
     setV('s-prismStation', cfg.prism?.stationName??'');
     setV('s-prismSnDigits', cfg.prism?.snDigits??0);
     setV('s-barcodeMode', cfg.ui?.barcodeMode??'Scanner');
+    setV('s-headMinWidth', cfg.ui?.headMinWidth??260);
     setV('s-pyVersion', cfg.script?.pyVersion??'Python313');
     setV('s-pyFolder', cfg.script?.pyFolder??'');
 
@@ -918,6 +926,7 @@ async function loadSettings() {
     applyModeClass();
     updateModeBadge();
     updateFgGroupVisibility();
+    applyHeadMinWidth(cfg.ui?.headMinWidth ?? 260);
     if (prismMode === 'Debug') loadFgPlans();
   } catch (e) { console.warn('loadSettings failed:', e); }
 }
@@ -925,6 +934,10 @@ async function loadSettings() {
 function applyModeClass() {
   document.body.classList.toggle('mode-debug', prismMode !== 'Operation');
   document.body.classList.toggle('mode-operation', prismMode === 'Operation');
+}
+
+function applyHeadMinWidth(px) {
+  document.documentElement.style.setProperty('--head-min-width', px + 'px');
 }
 
 function updateModeBadge() {
@@ -989,7 +1002,7 @@ async function saveSettings() {
       snDigits: parseInt(getV('s-prismSnDigits'),10)||0
     },
     script: { pyVersion: getV('s-pyVersion'), pyFolder: getV('s-pyFolder') },
-    ui: { barcodeMode: getV('s-barcodeMode') }
+    ui: { barcodeMode: getV('s-barcodeMode'), headMinWidth: parseInt(getV('s-headMinWidth'),10)||260 }
   };
   try {
     await fetch('/api/config', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(cfg) });
@@ -1006,6 +1019,7 @@ async function saveSettings() {
     applyModeClass();
     updateModeBadge();
     updateFgGroupVisibility();
+    applyHeadMinWidth(cfg.ui.headMinWidth);
     if (prismMode === 'Debug') loadFgPlans();
   } catch (e) { alert('Save failed: '+e.message); }
 }

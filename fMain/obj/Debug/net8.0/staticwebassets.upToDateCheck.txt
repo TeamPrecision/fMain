@@ -1,0 +1,9 @@
+wwwroot\css\datalog.css
+wwwroot\css\diagram.css
+wwwroot\css\site.css
+wwwroot\datalog.html
+wwwroot\diagram.html
+wwwroot\index.html
+wwwroot\js\app.js
+wwwroot\js\datalog.js
+wwwroot\js\diagram.js

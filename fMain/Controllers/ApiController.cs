@@ -231,6 +231,17 @@ public class ApiController : ControllerBase
         return Ok(new { valid, message = valid ? "OK" : "Employee ID not recognised by PRISM. Please log in to PRISM first." });
     }
 
+    // ── User Login (PRISM cUsers.UserLogin) ──────────────────────────────────
+
+    [HttpGet("user-login")]
+    public IActionResult UserLogin([FromQuery] string id)
+    {
+        if (string.IsNullOrEmpty(id))
+            return Ok(new { ok = false, result = "false" });
+        var (ok, result) = _prism.UserLogin(id);
+        return Ok(new { ok, result });
+    }
+
     // ── Sessions (admin) ──────────────────────────────────────────────────────
 
     [HttpGet("sessions")]

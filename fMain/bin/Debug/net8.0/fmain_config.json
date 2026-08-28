@@ -36,7 +36,7 @@
     "VisaTimeoutMs": 5000
   },
   "Prism": {
-    "DllPath": "",
+    "DllPath": "D:\\Project Test\\fMain\\DLL PRISM\\TeamPrecision.PRISM.dll",
     "Mode": "Operation",
     "ProcessName": "FCT",
     "ComputerName": "",

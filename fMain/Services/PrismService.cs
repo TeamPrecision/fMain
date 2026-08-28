@@ -99,6 +99,28 @@ public class PrismService
         return !string.IsNullOrEmpty(stored) && stored.Equals(employeeId, StringComparison.Ordinal);
     }
 
+    /// <summary>
+    /// Calls cUsers.UserLogin(empNo).
+    /// Returns (ok:true, result:"true") on success, (ok:true, result:"false") if user not found.
+    /// In Debug mode or when DLL is not loaded, returns success immediately.
+    /// </summary>
+    public (bool ok, string result) UserLogin(string empNo)
+    {
+        if (IsDebugMode || !_loaded)
+            return (true, "true");
+        try
+        {
+            var ret = InvokeStatic("TeamPrecision.PRISM.cUsers", "UserLogin", empNo);
+            var resultStr = ret?.ToString() ?? "false";
+            return (true, resultStr);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogWarning(ex, "PrismService.UserLogin failed");
+            return (false, "false");
+        }
+    }
+
     /// <summary>Returns "SUCCESS" or error description.</summary>
     public string SaveTestResult(string sn, string passFail, string testResult)
     {

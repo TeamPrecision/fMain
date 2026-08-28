@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "di0DLfkNIhiotfNRXk4rtNQzUEkBo0R3OA/8ZAZWRy0=",
+  "Hash": "MThmVYWGZ865NE6lue4QgmDzPtoLIfXsib1fbGm9y6s=",
   "Source": "fMain",
   "BasePath": "_content/fMain",
   "Mode": "Default",
@@ -10,182 +10,940 @@
     {
       "Name": "fMain\\wwwroot",
       "Source": "fMain",
-      "ContentRoot": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\",
+      "ContentRoot": "D:\\Project Test\\fMain\\fMain\\wwwroot\\",
       "BasePath": "_content/fMain",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\css\\datalog.css",
+      "Identity": "D:\\Project Test\\fMain\\fMain\\wwwroot\\css\\datalog.css",
       "SourceId": "fMain",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\",
+      "ContentRoot": "D:\\Project Test\\fMain\\fMain\\wwwroot\\",
       "BasePath": "_content/fMain",
-      "RelativePath": "css/datalog.css",
+      "RelativePath": "css/datalog#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "a75e633fkh",
+      "Integrity": "1rO+0O92/JBfTapmnEWJpBAurUSZsG6be+fmpa0j1ts=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\datalog.css"
     },
     {
-      "Identity": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\css\\diagram.css",
+      "Identity": "D:\\Project Test\\fMain\\fMain\\wwwroot\\css\\diagram.css",
       "SourceId": "fMain",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\",
+      "ContentRoot": "D:\\Project Test\\fMain\\fMain\\wwwroot\\",
       "BasePath": "_content/fMain",
-      "RelativePath": "css/diagram.css",
+      "RelativePath": "css/diagram#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "9vqrxobfeb",
+      "Integrity": "xVGGDI/78Ks6qn4EsVVr8nxfw6RLWRohhe5US6hrCmk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\diagram.css"
     },
     {
-      "Identity": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\css\\site.css",
+      "Identity": "D:\\Project Test\\fMain\\fMain\\wwwroot\\css\\site.css",
       "SourceId": "fMain",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\",
+      "ContentRoot": "D:\\Project Test\\fMain\\fMain\\wwwroot\\",
       "BasePath": "_content/fMain",
-      "RelativePath": "css/site.css",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "rbq4vlhkhk",
+      "Integrity": "R2F7vYaIJYZUoGaGsQ1booYZQSPxym1VeyfrGid8zr8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\datalog.html",
+      "Identity": "D:\\Project Test\\fMain\\fMain\\wwwroot\\datalog.html",
       "SourceId": "fMain",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\",
+      "ContentRoot": "D:\\Project Test\\fMain\\fMain\\wwwroot\\",
       "BasePath": "_content/fMain",
-      "RelativePath": "datalog.html",
+      "RelativePath": "datalog#[.{fingerprint}]?.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "hy0npwfvs4",
+      "Integrity": "mU098gyLRUNqTijI9sT6BSejuwgFDvviyzrGUvOLYuA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\datalog.html"
     },
     {
-      "Identity": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\diagram.html",
+      "Identity": "D:\\Project Test\\fMain\\fMain\\wwwroot\\diagram.html",
       "SourceId": "fMain",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\",
+      "ContentRoot": "D:\\Project Test\\fMain\\fMain\\wwwroot\\",
       "BasePath": "_content/fMain",
-      "RelativePath": "diagram.html",
+      "RelativePath": "diagram#[.{fingerprint}]?.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ncst47at13",
+      "Integrity": "xxSndMEgKBoWj6+riOVp9ACU3JFkm33wEkL7B6CwAmE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\diagram.html"
     },
     {
-      "Identity": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\index.html",
+      "Identity": "D:\\Project Test\\fMain\\fMain\\wwwroot\\index.html",
       "SourceId": "fMain",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\",
+      "ContentRoot": "D:\\Project Test\\fMain\\fMain\\wwwroot\\",
       "BasePath": "_content/fMain",
-      "RelativePath": "index.html",
+      "RelativePath": "index#[.{fingerprint}]?.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "sikcgu2iwe",
+      "Integrity": "5No4e3zGtIMMsdLBqL121+0rb3FWsvbYjcBUAiwu5Qk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\js\\app.js",
+      "Identity": "D:\\Project Test\\fMain\\fMain\\wwwroot\\js\\app.js",
       "SourceId": "fMain",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\",
+      "ContentRoot": "D:\\Project Test\\fMain\\fMain\\wwwroot\\",
       "BasePath": "_content/fMain",
-      "RelativePath": "js/app.js",
+      "RelativePath": "js/app#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "00b0qtzk5d",
+      "Integrity": "sFUEOfJxV5A6PfsBWhY+dGYgitw7Tcaf86AWQDlPcNI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\app.js"
     },
     {
-      "Identity": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\js\\datalog.js",
+      "Identity": "D:\\Project Test\\fMain\\fMain\\wwwroot\\js\\datalog.js",
       "SourceId": "fMain",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\",
+      "ContentRoot": "D:\\Project Test\\fMain\\fMain\\wwwroot\\",
       "BasePath": "_content/fMain",
-      "RelativePath": "js/datalog.js",
+      "RelativePath": "js/datalog#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "drhtbxfz1d",
+      "Integrity": "Kb4XbZtbtEUoapjmrxSilo48eL6lVpJgQzgu5tAyJgA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\datalog.js"
     },
     {
-      "Identity": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\js\\diagram.js",
+      "Identity": "D:\\Project Test\\fMain\\fMain\\wwwroot\\js\\diagram.js",
       "SourceId": "fMain",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Server Svn\\Claude\\fMain\\fMain\\wwwroot\\",
+      "ContentRoot": "D:\\Project Test\\fMain\\fMain\\wwwroot\\",
       "BasePath": "_content/fMain",
-      "RelativePath": "js/diagram.js",
+      "RelativePath": "js/diagram#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "w4i21in4yt",
+      "Integrity": "sJ578GmJIOLgdUY40QtADeRnyGlpclUj4NFqyBWDWMM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\diagram.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/datalog.a75e633fkh.css",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\css\\datalog.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7872"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1rO+0O92/JBfTapmnEWJpBAurUSZsG6be+fmpa0j1ts=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a75e633fkh"
+        },
+        {
+          "Name": "label",
+          "Value": "css/datalog.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1rO+0O92/JBfTapmnEWJpBAurUSZsG6be+fmpa0j1ts="
+        }
+      ]
+    },
+    {
+      "Route": "css/datalog.css",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\css\\datalog.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7872"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1rO+0O92/JBfTapmnEWJpBAurUSZsG6be+fmpa0j1ts=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1rO+0O92/JBfTapmnEWJpBAurUSZsG6be+fmpa0j1ts="
+        }
+      ]
+    },
+    {
+      "Route": "css/diagram.9vqrxobfeb.css",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\css\\diagram.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5227"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xVGGDI/78Ks6qn4EsVVr8nxfw6RLWRohhe5US6hrCmk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9vqrxobfeb"
+        },
+        {
+          "Name": "label",
+          "Value": "css/diagram.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xVGGDI/78Ks6qn4EsVVr8nxfw6RLWRohhe5US6hrCmk="
+        }
+      ]
+    },
+    {
+      "Route": "css/diagram.css",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\css\\diagram.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5227"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xVGGDI/78Ks6qn4EsVVr8nxfw6RLWRohhe5US6hrCmk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xVGGDI/78Ks6qn4EsVVr8nxfw6RLWRohhe5US6hrCmk="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R2F7vYaIJYZUoGaGsQ1booYZQSPxym1VeyfrGid8zr8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Aug 2026 05:59:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R2F7vYaIJYZUoGaGsQ1booYZQSPxym1VeyfrGid8zr8="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.rbq4vlhkhk.css",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R2F7vYaIJYZUoGaGsQ1booYZQSPxym1VeyfrGid8zr8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Aug 2026 05:59:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rbq4vlhkhk"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R2F7vYaIJYZUoGaGsQ1booYZQSPxym1VeyfrGid8zr8="
+        }
+      ]
+    },
+    {
+      "Route": "datalog.html",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\datalog.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mU098gyLRUNqTijI9sT6BSejuwgFDvviyzrGUvOLYuA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mU098gyLRUNqTijI9sT6BSejuwgFDvviyzrGUvOLYuA="
+        }
+      ]
+    },
+    {
+      "Route": "datalog.hy0npwfvs4.html",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\datalog.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mU098gyLRUNqTijI9sT6BSejuwgFDvviyzrGUvOLYuA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hy0npwfvs4"
+        },
+        {
+          "Name": "label",
+          "Value": "datalog.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mU098gyLRUNqTijI9sT6BSejuwgFDvviyzrGUvOLYuA="
+        }
+      ]
+    },
+    {
+      "Route": "diagram.html",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\diagram.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4256"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xxSndMEgKBoWj6+riOVp9ACU3JFkm33wEkL7B6CwAmE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xxSndMEgKBoWj6+riOVp9ACU3JFkm33wEkL7B6CwAmE="
+        }
+      ]
+    },
+    {
+      "Route": "diagram.ncst47at13.html",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\diagram.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4256"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xxSndMEgKBoWj6+riOVp9ACU3JFkm33wEkL7B6CwAmE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ncst47at13"
+        },
+        {
+          "Name": "label",
+          "Value": "diagram.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xxSndMEgKBoWj6+riOVp9ACU3JFkm33wEkL7B6CwAmE="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24228"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5No4e3zGtIMMsdLBqL121+0rb3FWsvbYjcBUAiwu5Qk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Aug 2026 05:58:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5No4e3zGtIMMsdLBqL121+0rb3FWsvbYjcBUAiwu5Qk="
+        }
+      ]
+    },
+    {
+      "Route": "index.sikcgu2iwe.html",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24228"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5No4e3zGtIMMsdLBqL121+0rb3FWsvbYjcBUAiwu5Qk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Aug 2026 05:58:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sikcgu2iwe"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5No4e3zGtIMMsdLBqL121+0rb3FWsvbYjcBUAiwu5Qk="
+        }
+      ]
+    },
+    {
+      "Route": "js/app.00b0qtzk5d.js",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\js\\app.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47979"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sFUEOfJxV5A6PfsBWhY+dGYgitw7Tcaf86AWQDlPcNI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Aug 2026 05:59:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "00b0qtzk5d"
+        },
+        {
+          "Name": "label",
+          "Value": "js/app.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sFUEOfJxV5A6PfsBWhY+dGYgitw7Tcaf86AWQDlPcNI="
+        }
+      ]
+    },
+    {
+      "Route": "js/app.js",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\js\\app.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47979"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sFUEOfJxV5A6PfsBWhY+dGYgitw7Tcaf86AWQDlPcNI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Aug 2026 05:59:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sFUEOfJxV5A6PfsBWhY+dGYgitw7Tcaf86AWQDlPcNI="
+        }
+      ]
+    },
+    {
+      "Route": "js/datalog.drhtbxfz1d.js",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\js\\datalog.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14144"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Kb4XbZtbtEUoapjmrxSilo48eL6lVpJgQzgu5tAyJgA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "drhtbxfz1d"
+        },
+        {
+          "Name": "label",
+          "Value": "js/datalog.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Kb4XbZtbtEUoapjmrxSilo48eL6lVpJgQzgu5tAyJgA="
+        }
+      ]
+    },
+    {
+      "Route": "js/datalog.js",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\js\\datalog.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14144"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Kb4XbZtbtEUoapjmrxSilo48eL6lVpJgQzgu5tAyJgA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Kb4XbZtbtEUoapjmrxSilo48eL6lVpJgQzgu5tAyJgA="
+        }
+      ]
+    },
+    {
+      "Route": "js/diagram.js",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\js\\diagram.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16032"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sJ578GmJIOLgdUY40QtADeRnyGlpclUj4NFqyBWDWMM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sJ578GmJIOLgdUY40QtADeRnyGlpclUj4NFqyBWDWMM="
+        }
+      ]
+    },
+    {
+      "Route": "js/diagram.w4i21in4yt.js",
+      "AssetFile": "D:\\Project Test\\fMain\\fMain\\wwwroot\\js\\diagram.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16032"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sJ578GmJIOLgdUY40QtADeRnyGlpclUj4NFqyBWDWMM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Aug 2026 16:24:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w4i21in4yt"
+        },
+        {
+          "Name": "label",
+          "Value": "js/diagram.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sJ578GmJIOLgdUY40QtADeRnyGlpclUj4NFqyBWDWMM="
+        }
+      ]
     }
   ]
 }

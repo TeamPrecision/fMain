@@ -10,7 +10,7 @@
   ],
   "ModulesBasePath": "D:/svn",
   "Tester": {
-    "NumHeads": 3,
+    "NumHeads": 12,
     "FailBehavior": "Stop",
     "AllowRetest": false,
     "AutoStart": false,
@@ -29,7 +29,8 @@
     "PyFolder": ""
   },
   "UI": {
-    "BarcodeMode": "Scanner"
+    "BarcodeMode": "Scanner",
+    "HeadMinWidth": 260
   },
   "Hardware": {
     "DevManViewPath": "",
@@ -37,8 +38,8 @@
     "VisaTimeoutMs": 5000
   },
   "Prism": {
-    "DllPath": "D:\\Server Svn\\Claude\\fMain\\DLL PRISM\\TeamPrecision.PRISM.dll",
-    "Mode": "Debug",
+    "DllPath": "D:\\Project Test\\fMain\\DLL PRISM\\TeamPrecision.PRISM.dll",
+    "Mode": "Operation",
     "ProcessName": "FCT",
     "ComputerName": "",
     "StationName": "",

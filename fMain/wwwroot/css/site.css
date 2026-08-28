@@ -187,7 +187,7 @@ input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--blue); cur
 .app-header {
   display: flex; align-items: center; gap: 16px;
   height: 52px; padding: 0 16px;
-  background: var(--surface);
+  background: #000000;
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
   z-index: 100;
@@ -279,7 +279,8 @@ input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--blue); cur
 /* ══════════════════════ HEADS GRID ═════════════════════════════════════════ */
 .heads-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--head-min-width, 260px), 1fr));
+  grid-auto-rows: 1fr;
   gap: 12px;
 }
 
@@ -342,8 +343,8 @@ input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--blue); cur
 .head-table-wrap {
   flex: 1;
   overflow-y: auto;
-  max-height: 220px;
-  min-height: 80px;
+  max-height: none;
+  min-height: 0;
 }
 .step-table { width: 100%; border-collapse: collapse; font-size: 12px; }
 .step-table th, .step-table td {
@@ -714,29 +715,48 @@ input.tp-tmo { text-align: right; }
 
 /* ══════════════════════ MODE THEMES — full-page color shift ════════════════ */
 
-/* DEBUG: teal-tinted surface */
+/* DEBUG: yellow theme */
 body.mode-debug {
-  --bg:      #071710;
-  --surface: #0d211a;
-  --panel:   #112619;
-  --border:  #1c3d2c;
-  --border2: #254d38;
+  --bg:        #fff8e1;
+  --surface:   #fffde7;
+  --panel:     #fff176;
+  --border:    #f9a825;
+  --border2:   #f57f17;
+  --text:      #1a1200;
+  --text-dim:  #4a3800;
+  --text-mute: #9e8300;
 }
-body.mode-debug .app-header  { background: #0b1f18; border-bottom-color: #1c3d2c; }
+body.mode-debug .app-header  { background: #000000; border-bottom-color: #333333; }
 body.mode-debug .h-title     { color: var(--green); }
-body.mode-debug .app-footer  { background: #0b1f18; border-top-color: #1c3d2c; }
+body.mode-debug .app-footer  { background: var(--surface); border-top-color: var(--border); }
 
-/* OPERATION: amber-tinted surface */
+/* OPERATION: white theme */
 body.mode-operation {
-  --bg:      #100d01;
-  --surface: #191400;
-  --panel:   #1f1a02;
-  --border:  #3a2e05;
-  --border2: #4d3d07;
+  --bg:        #f5f7fa;
+  --surface:   #ffffff;
+  --panel:     #eaecf0;
+  --border:    #d0d5dd;
+  --border2:   #b8bfc9;
+  --text:      #101828;
+  --text-dim:  #475467;
+  --text-mute: #98a2b3;
 }
-body.mode-operation .app-header  { background: #140f00; border-bottom-color: #3a2e05; }
+body.mode-operation .app-header  { background: #000000; border-bottom-color: #333333; }
 body.mode-operation .h-title     { color: var(--amber); }
-body.mode-operation .app-footer  { background: #140f00; border-top-color: #3a2e05; }
+body.mode-operation .app-footer  { background: var(--surface); border-top-color: var(--border); }
+
+/* Light themes: nav buttons must remain readable on the always-black header */
+body.mode-operation .app-header .nav-btn,
+body.mode-debug     .app-header .nav-btn { color: #9ea5ae; }
+
+body.mode-operation .app-header .nav-btn:hover,
+body.mode-debug     .app-header .nav-btn:hover { color: #e4e7ec; background: rgba(255,255,255,.1); }
+
+body.mode-operation .app-header .nav-btn.active,
+body.mode-debug     .app-header .nav-btn.active { color: var(--blue); background: rgba(79,156,248,.12); }
+
+body.mode-operation .app-header .h-name,
+body.mode-debug     .app-header .h-name { color: #9ea5ae; }
 
 /* Mode badge */
 .mode-badge {
@@ -762,30 +782,31 @@ body.monitor-mode [onclick="showPage('settings')"] { opacity: 0.4; pointer-event
 /* ══════════════════════ HEAD STATUS BADGES ════════════════════════════════ */
 .head-status.waiting { background: rgba(167,139,250,.18); color: var(--purple); }
 
-/* ══════════════════════ MULTI-HEAD GRID ════════════════════════════════════ */
-/* 1 head: full screen */
-.heads-grid.single-head {
-  grid-template-columns: 1fr;
-  height: calc(100vh - 120px);
+/* ══════════════════════ DASHBOARD — NO-SCROLL LAYOUT ══════════════════════ */
+/* Dashboard fills the page as a flex column; heads grid takes remaining space */
+#page-dashboard {
+  padding: 0;
+  overflow: hidden;
 }
-.heads-grid.single-head .head-card           { height: 100%; }
-.heads-grid.single-head .head-table-wrap     { max-height: none; flex: 1; }
+#page-dashboard.active {
+  display: flex;
+  flex-direction: column;
+}
+#page-dashboard > .toolbar {
+  flex-shrink: 0;
+  margin: 10px 10px 0;
+}
+#headsGrid {
+  flex: 1;
+  min-height: 0;
+  padding: 10px;
+}
 
-/* 2 heads: two equal columns, full height */
-.heads-grid.dual-head {
-  grid-template-columns: 1fr 1fr;
-  height: calc(100vh - 120px);
-}
-.heads-grid.dual-head .head-card             { height: 100%; }
-.heads-grid.dual-head .head-table-wrap       { max-height: none; flex: 1; }
-
-/* 3 heads: three equal columns, full height */
-.heads-grid.triple-head {
-  grid-template-columns: 1fr 1fr 1fr;
-  height: calc(100vh - 120px);
-}
-.heads-grid.triple-head .head-card           { height: 100%; }
-.heads-grid.triple-head .head-table-wrap     { max-height: none; flex: 1; }
+/* Head card: fixed sections don't shrink; table wrap fills the rest */
+.head-header     { flex-shrink: 0; }
+.head-sn-row     { flex-shrink: 0; }
+.head-progress-row { flex-shrink: 0; }
+.head-footer     { flex-shrink: 0; }
 
 /* ══════════════════════ STEP TABLE — 6 COLUMNS ════════════════════════════ */
 .col-step-num     { width: 28px; text-align: center; color: var(--text-mute); }
@@ -882,3 +903,20 @@ body.monitor-mode [onclick="showPage('settings')"] { opacity: 0.4; pointer-event
 .btn { transition: opacity .15s, transform .12s, box-shadow .12s; }
 .btn:hover { opacity: 1; box-shadow: 0 2px 8px rgba(0,0,0,.3); transform: translateY(-1px); }
 .btn:active { transform: translateY(0); box-shadow: none; }
+
+/* ══════════════════════ TEST HEAD HEADER — MODE COLORS ═════════════════════ */
+/* Operation mode: white header on test head cards */
+body.mode-operation .head-header {
+  background: #ffffff;
+  border-bottom-color: #cccccc;
+}
+body.mode-operation .head-header .head-num { color: #333333; }
+body.mode-operation .head-header .head-wo-badge { background: #eeeeee; border-color: #cccccc; color: #444444; }
+
+/* Debug mode: yellow header on test head cards */
+body.mode-debug .head-header {
+  background: #ffe033;
+  border-bottom-color: #c8a000;
+}
+body.mode-debug .head-header .head-num { color: #333333; }
+body.mode-debug .head-header .head-wo-badge { background: rgba(0,0,0,.1); border-color: rgba(0,0,0,.2); color: #333333; }
